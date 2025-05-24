@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<a href="index.html">Home</a><br>
+		<a href="./cadastrarProduto.html">Register new product</a><br>
+		<a href="./consultarProdutos.jsp">View products</a>
+	</div>
+	<h1>New Product</h1>
+
+	<form method="POST" action="./cadastrarProduto.jsp">
+		<label for="descricao">Informe a Descrição</label>
+		<input type="text" id="descricao" placeholder="Informe o descricao" name="descricao">
+		<br>
+		
+		<label for="preco">Informe Preço</label>
+		<input type="text" id="preco" placeholder="Informe o preco" name="preco" required>
+		<br>
+		
+		<label for="medida">Informe a unidade de medida</label>
+		<input type="text" id="medida" placeholder="Informe o medida" name="medida" required>
+		<br>
+		
+		<label for="estoque">Informe estoque</label>
+		<input type="text" id="estoque" placeholder="Informe o estoque" name="estoque" required>
+		<br>
+		
+		<label for="categoria">Informe Categoria</label>
+		<input type="text" id="categoria" placeholder="Informe a categoria" name="categoria" required>
+		<br>
+		<button>Register</button>
+	</form>
+</body>
+</html>
