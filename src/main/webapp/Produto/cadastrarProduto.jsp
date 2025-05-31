@@ -1,4 +1,4 @@
-
+<%@page import="controller.ProductController"%>
 <%@page import="dao.ProdutoDao"%>
 <%@page import="Classes.Produto"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -25,7 +25,8 @@
 				produto.setUnidadeMedida(medida);
 				produto.setEstoque(estoque);
 				produto.setCategoria(categoria);
-				ProdutoDao.insertProduct(produto);
+				
+				new ProductController().salvar(produto);
 				
 				response.sendRedirect("./consultarProdutos.jsp");
 			}catch(RuntimeException e){

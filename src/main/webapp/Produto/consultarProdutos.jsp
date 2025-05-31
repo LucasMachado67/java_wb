@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div>
-		<a href="./index.html">Home</a><br>
+		<a href="../Index.html">Home</a><br>
 		<a href="./cadastrarProduto.html">Register new product</a><br>
 	</div>
 	<h1>All Products</h1>	
@@ -28,7 +28,7 @@
 		</thead>
 		<tbody >
 			<%
-			List<Produto> produtos = ProdutoDao.getAll();
+			List<Produto> produtos = new ProdutoDao().getAll();
 				for(Produto p : produtos){
 					out.print("<tr>");
 					out.print("<td>" + p.getCode() + "</td>");

@@ -12,8 +12,8 @@
 </head>
 <body>
 	<div>
-		<a href="index.html">Home</a>
-		<a href="Cadastro.jsp">Register</a>
+		<a href="Index.html">Home</a><br>
+		<a href="Cadastro.jsp">Register</a><br>
 		<a href="Consulta.jsp">View</a>
 	</div>
 	<h1>New Register</h1>	
@@ -23,16 +23,20 @@
 				<th>Id</th>			 
 				<th>Name</th>			
 				<th>Email</th>	
+				<th>Edit</th>	
+				<th>Delete</th>	
 			</tr>		
 		</thead>
 		<tbody >
 			<%
-			List<Cliente> clientes = ClienteDao.getAll();
+			List<Cliente> clientes = new ClienteDao().getAll();
 				for(Cliente c : clientes){
 					out.print("<tr>");
 					out.print("<td>" + c.getId() + "</td>");
 					out.print("<td>" + c.getNome() + "</td>");
 					out.print("<td>" + c.getEmail() + "</td>");
+					out.print("<td><a href='Cadastro.jsp?id="+c.getId()+"'>editar</a></td>");
+					out.print("<td><a href='excluir.jsp?id="+c.getId()+"'>excluir</a></td>");				
 					out.print("</tr>");
 				}
 			%>
