@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Contatos</h1>
+	<!-- >  <ul >
+	<li th:each="contato : ${lista}" th:text="${contato}">Nome</li>
+	</ul>-->
+	
+	
+	<table>
+		<thead>
+			<tr>
+				<td>Nome</td>
+				<td>Email</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="item : ${lista}">
+				<td th:text="${item.nome}"></td>
+				<td th:text="${item.email}"></td>
+			</tr>
+		</tbody>
+		<a th:href="@{/novoContato}">Novo</a>
+		
+	</table>
+</body>
+</html>
